@@ -1,0 +1,178 @@
+{
+  "name": "anf-webapp",
+  "private": true,
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "test:unit": "cross-env CI=true react-app-rewired test",
+    "test:puppeteer:run": "jest --config ./src/lessons/m10/puppeteer.jest.config.js",
+    "test:puppeteer:clean": "rimraf  ./src/lessons/m10/puppeteer/screenshots",
+    "test:puppeteer:a11y": "jest --config ./src/lessons/m10/puppeteer.jest.config.js ./src/lessons/m10/puppeteer/a11y",
+    "test:cypress:run": "cypress run --project ./src/lessons/m10",
+    "test:cypress:open": "cypress open --project ./src/lessons/m10",
+    "test:cypress:clean": "rimraf ./src/lessons/m10/cypress/screenshots ./src/lessons/m10/cypress/videos",
+    "test:backstop:test": "backstop test --config src/lessons/m10/backstop.json",
+    "test:backstop:approve": "backstop approve --config src/lessons/m10/backstop.json",
+    "test:backstop:clean": "rimraf ./src/lessons/m10/backstop_data/bitmaps_test ./src/lessons/m10/backstop_data/html_report",
+    "test:storyshots:run": "jest --config ./src/lessons/m10/storyshots.jest.config.js",
+    "generate:lighthouse-report": "node src/lessons/m10/puppeteer/perf/lighthouse",
+    "check:circular-deps": "madge --warning --circular --extensions ts,tsx src",
+    "dump:deps": "madge --json --include-npm src/index.tsx > deps.json",
+    "storybook": "storybook dev -p 6006 --no-version-updates",
+    "build-storybook": "storybook build",
+    "mobx-devtools": "node .scripts/mobx-devtools"
+  },
+  "dependencies": {
+    "@axe-core/puppeteer": "^4.4.3",
+    "@axe-core/react": "^4.4.3",
+    "@mdx-js/react": "^2.3.0",
+    "@reduxjs/toolkit": "^1.9.5",
+    "@storybook/addon-a11y": "^7.0.20",
+    "@storybook/addon-actions": "^7.0.20",
+    "@storybook/addon-essentials": "^7.0.20",
+    "@storybook/addon-interactions": "^7.0.20",
+    "@storybook/addon-links": "^7.0.20",
+    "@storybook/addon-storyshots": "^7.0.20",
+    "@storybook/addon-storyshots-puppeteer": "^7.0.20",
+    "@storybook/blocks": "^7.0.20",
+    "@storybook/mdx1-csf": "^1.0.0",
+    "@storybook/node-logger": "^7.0.20",
+    "@storybook/preset-create-react-app": "^7.0.20",
+    "@storybook/react": "^7.0.20",
+    "@storybook/react-webpack5": "^7.0.20",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "@tanstack/react-query": "^4.29.13",
+    "@tanstack/react-query-devtools": "^4.29.13",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/cypress-image-snapshot": "^3.1.6",
+    "@types/jest": "^27.5.2",
+    "@types/jest-axe": "^3.5.3",
+    "@types/jest-image-snapshot": "^4.3.1",
+    "@types/lodash": "^4.14.182",
+    "@types/node": "^16.11.39",
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11",
+    "@types/react-modal": "^3.13.1",
+    "@types/react-redux": "^7.1.24",
+    "@types/redux-mock-store": "^1.0.3",
+    "@types/simplemde": "^1.11.8",
+    "@types/styled-components": "^5.1.26",
+    "@types/uuid": "^8.3.4",
+    "@xstate/inspect": "^0.8.0",
+    "@xstate/react": "^3.2.2",
+    "@xstate/test": "^0.5.1",
+    "axe-core": "^4.4.2",
+    "axios": "^1.4.0",
+    "axios-retry": "^3.5.0",
+    "babel-plugin-named-exports-order": "^0.0.2",
+    "backstopjs": "^6.1.0",
+    "chalk": "^4.1.2",
+    "classnames": "^2.3.1",
+    "cross-env": "^7.0.3",
+    "cypress": "^12.17.2",
+    "cypress-axe": "^1.4.0",
+    "cypress-image-snapshot": "^4.0.1",
+    "fetch-mock": "^9.11.0",
+    "flush-promises": "^1.0.2",
+    "highlight.js": "^10.7.3",
+    "husky": "^4.3.8",
+    "immer": "^10.0.2",
+    "isomorphic-fetch": "^3.0.0",
+    "jest": "^27.5.1",
+    "jest-axe": "^6.0.0",
+    "jest-image-snapshot": "^4.5.1",
+    "jest-styled-components": "^7.1.1",
+    "lighthouse": "^9.6.3",
+    "madge": "^5.0.2",
+    "marky": "^1.2.4",
+    "mobx": "^6.9.1",
+    "mobx-react-lite": "^4.0.3",
+    "msw": "^1.2.2",
+    "msw-storybook-addon": "^1.8.0",
+    "node-polyfill-webpack-plugin": "^2.0.1",
+    "polished": "^4.2.2",
+    "prop-types": "^15.8.1",
+    "puppeteer": "~18.1.0",
+    "react": "^18.2.0",
+    "react-app-rewired": "^2.2.1",
+    "react-dom": "^18.2.0",
+    "react-markdown": "^8.0.3",
+    "react-modal": "^3.15.1",
+    "react-redux": "^8.0.2",
+    "react-router": "6.3.0",
+    "react-router-dom": "6.3.0",
+    "react-scripts": "^5.0.1",
+    "redux": "^4.2.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-mock-store": "^1.5.4",
+    "redux-thunk": "^2.4.1",
+    "request": "^2.88.2",
+    "retry-axios": "^3.0.0",
+    "rimraf": "^3.0.2",
+    "rxjs": "^7.5.5",
+    "rxjs-spy": "^8.0.2",
+    "simplemde": "^1.11.2",
+    "socket.io-client": "^4.4.1",
+    "storybook": "^7.0.20",
+    "styled-components": "^5.3.11",
+    "ts-jest": "^27.1.5",
+    "typescript": "~4.6.4",
+    "uuid": "^8.3.2",
+    "web-vitals": "^2.1.4",
+    "webpack": "^5.73.0",
+    "webpack-bundle-analyzer": "^4.5.0",
+    "xstate": "^4.38.0"
+  },
+  "jest": {
+    "modulePathIgnorePatterns": [
+      "m2/setup",
+      "m3/homework/contacts",
+      "cypress",
+      "puppeteer",
+      "storyshots"
+    ],
+    "moduleNameMapper": {
+      "^axios$": "axios/dist/axios.js"
+    }
+  },
+  "madge": {
+    "tsConfig": "tsconfig.json"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  },
+  "engines": {
+    "node": ">=16.14.0",
+    "npm": ">=8.7.0"
+  },
+  "overrides": {
+    "cypress": "^12.17.2",
+    "jest": "^27.5.1",
+    "puppeteer": "~18.1.0",
+    "webpack": "^5.73.0"
+  }
+}

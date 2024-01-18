@@ -1,0 +1,40 @@
+{
+  "name": "anf-m3-homework-contacts",
+  "private": true,
+  "scripts": {
+    "test": "react-app-rewired test",
+    "test:unit": "cross-env CI=true react-app-rewired test"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^12.1.5",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/enzyme": "^3.10.13",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.11.68",
+    "@types/react": "^17.0.62",
+    "@types/react-dom": "^17.0.20",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.8.0",
+    "enzyme": "^3.11.0",
+    "enzyme-to-json": "^3.6.2"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/src/",
+      "<rootDir>/tests/"
+    ],
+    "testMatch": [
+      "<rootDir>/tests/**/*.spec.jsx"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupTests.ts"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorScreenContext should send HTTP POST /logs if ErrorPage was displayed 1`] = `
+Array [
+  Array [
+    RestRequest {
+      "_body": ArrayBuffer [],
+      "_bodyUsed": false,
+      "cache": "default",
+      "cookies": Object {},
+      "credentials": "omit",
+      "destination": "",
+      "headers": HeadersPolyfill {
+        Symbol(normalizedHeaders): Object {
+          "accept": "application/json, text/plain, */*",
+          "content-type": "application/json",
+        },
+        Symbol(rawHeaderNames): Map {
+          "accept" => "accept",
+          "content-type" => "content-type",
+        },
+      },
+      "id": "",
+      "integrity": "",
+      "keepalive": false,
+      "method": "POST",
+      "mode": "cors",
+      "params": Object {},
+      "priority": "auto",
+      "redirect": "follow",
+      "referrer": "",
+      "referrerPolicy": "no-referrer",
+      "url": "http://localhost:3010/api/logs",
+    },
+  ],
+]
+`;
