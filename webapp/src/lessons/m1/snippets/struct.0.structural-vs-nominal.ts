@@ -15,14 +15,16 @@ Dodatkowo - jeśli w ogóle nie zadeklarujemy żadnego interfejsu, typu ani klas
 
 interface Human {
   name: string
+  numberOfLegs: number
 }
 
 class Person {
   constructor(public name: string) { }
 }
 
-interface Dog {
+type Dog = {
   name: string
+  numberOfLegs: number
 }
 
 // 1. intro

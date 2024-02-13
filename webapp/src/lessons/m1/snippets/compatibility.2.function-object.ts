@@ -11,7 +11,7 @@ var f4: Function = (n1: number, n2: string) => true
 
 
 // 2. Object
-
+(4).toFixed(2);/
 
 // Object == {}
 // podmiana `Object` na `object` - non-primitive type
