@@ -46,7 +46,8 @@ function producePerson() {
   return {
     name: "John Lennon",
     age: 40,
-    city: "Liverpool"
+    city: "Liverpool",
+    country: "UK"
   }
 }
 

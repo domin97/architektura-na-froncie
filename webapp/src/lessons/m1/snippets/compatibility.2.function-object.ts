@@ -11,11 +11,11 @@ var f4: Function = (n1: number, n2: string) => true
 
 
 // 2. Object
-(4).toFixed(2);/
+// (4).toFixed(2)
 
 // Object == {}
 // podmiana `Object` na `object` - non-primitive type
-var o1: Object = 4
+var o1: object = 4
 var o2 = {}
 var o3: {} = 4
 

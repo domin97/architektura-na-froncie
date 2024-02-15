@@ -3,7 +3,7 @@ const getData = async () => 125
 // ASYNC: dane najpierw trzeba pobrać, inicjalnie ich nie ma
 
 class DataController {
-  private data: number
+  private data?: number
 
   constructor(){}
 

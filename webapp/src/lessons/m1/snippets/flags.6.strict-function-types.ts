@@ -47,9 +47,9 @@ appEngine(processWebDeveloper, developer) // ❌
 // 🤓 zakomentuj "przed" + odkomentuj "po"
 
 // przed:
-type OperationType = "LOAN" | "INVESTMENT"
+// type OperationType = "LOAN" | "INVESTMENT"
 // po:
-// type OperationType = "LOAN" | "INVESTMENT" | "INCOME" | "OUTCOME"
+type OperationType = "LOAN" | "INVESTMENT" | "INCOME" | "OUTCOME"
 
 declare const operations: OperationType[]
 

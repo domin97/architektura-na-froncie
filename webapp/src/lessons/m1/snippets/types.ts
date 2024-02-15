@@ -6,4 +6,8 @@ export interface Employee {
   lastName: string
   salary: number
   title: string
+  address: {
+    city: string
+    country: string
+  }
 }

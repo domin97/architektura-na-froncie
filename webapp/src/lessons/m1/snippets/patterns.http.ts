@@ -16,7 +16,7 @@ export interface Transfer {
 
 // opcja 1 - "use the platform", czyli native fetch
 
-export const __getTransfers = () => {
+export const __getTransfers = (): Promise<Transfer[]> => {
   return fetch('/account/transfers')
   .then(res => res.json())
   // .then(collection => collection.mkjhgbvnmjhgvbnmjhgv)

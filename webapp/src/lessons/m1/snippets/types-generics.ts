@@ -31,7 +31,7 @@ const storage = new StorageClass(['ANF'])
 
 // 2. GENERIC CONSTRAINTS (obostrzenia)
 
-class AnotherStorage<T > {
+class AnotherStorage<T extends {id: string}> {
   constructor(
     public data: T[]
   ){}
@@ -62,7 +62,7 @@ function combineFn<T>(a: T, b: T){
 // generyk może być INNY dla każdego WYWOŁANIA
 // (nie jest stały dla funkcji)
 const combinedStrings = combineFn('a', 'b') // { a: string, b: string }
-const combinedNumbers = combineFn(1, 2) // { a: number, b: number }
+const combinedNumbers = combineFn<number>(1, 2) // { a: number, b: number }
 
 
 

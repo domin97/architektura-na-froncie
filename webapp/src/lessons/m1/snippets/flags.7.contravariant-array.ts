@@ -10,8 +10,8 @@
 
 // robimy kontrawariancyjnego arraya, opartego o arrowy.
 interface ContraVariantArray<T> {
-  push: (value: T) => number // contravariant, bo arrow
-  // push(value: T): number // bivariant, bo metoda
+  // push: (value: T) => number // contravariant, bo arrow
+  push(value: T): number // bivariant, bo metoda
 }
 
 

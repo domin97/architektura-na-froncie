@@ -1,7 +1,7 @@
 import { Employee } from "./types"
 declare const employees: Employee[]
 
-const john: Employee = employees.find(e => e.firstName === 'John')
+const john: Employee | undefined = employees.find(e => e.firstName === 'John')
 
 type TrainingGroup = {
   date?: Date
@@ -9,4 +9,7 @@ type TrainingGroup = {
 }
 
 let training: TrainingGroup = { employees: [] }
-const dateStr = training.date.toISOString()
+
+if (training.date) {
+  const dateStr = training.date.toISOString()
+}

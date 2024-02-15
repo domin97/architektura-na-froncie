@@ -6,6 +6,6 @@ type PatchParams = {
 }
 
 const params = { value: '125' }
-function patch(params: PatchParams){}
+declare function patch(params: PatchParams): void
 
 patch(params) // ❌ has no properties in common with type 'PatchParams'
