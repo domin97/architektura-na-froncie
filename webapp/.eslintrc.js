@@ -16,7 +16,7 @@ module.exports = {
     "prefer-const": "warn",
     "no-console": "warn",
     "@typescript-eslint/prefer-readonly": "off",
-    "@typescript-eslint/no-implicit-any-catch": "warn",
+    "@typescript-eslint/no-implicit-any-catch": "error",
     "@typescript-eslint/no-unsafe-call": "warn",
     "@typescript-eslint/no-unsafe-return": "warn",
     "@typescript-eslint/no-unnecessary-type-assertion": "warn",

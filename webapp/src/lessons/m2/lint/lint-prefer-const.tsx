@@ -16,8 +16,8 @@ interface ChangeLimitsFormViewProps {
 }
 
 export const ChangeLimitsFormView: React.FC<ChangeLimitsFormViewProps> = (props) => {
-  let { quota: { dailyLimit }, onApply, onCancel } = props
-  let [newQuota, setNewQuota] = useState(dailyLimit)
+  const { quota: { dailyLimit }, onApply, onCancel } = props
+  const [newQuota, setNewQuota] = useState(dailyLimit)
 
   return <>
     <div>

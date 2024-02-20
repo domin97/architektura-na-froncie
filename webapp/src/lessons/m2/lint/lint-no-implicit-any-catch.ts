@@ -18,7 +18,11 @@ export async function asyncCall(){
   try {
     const response = await axios.get<object[]>('api.com/data')
     return response.data.length
-  } catch (e) {
-    handleAxiosError(e)
+  } catch (e: unknown) {
+    if (isAxiosError(e)) {
+      handleAxiosError(e)
+    } else {
+      // generyczny fallback - obsługa innego jeszcze błędu 
+    }
   }
 }

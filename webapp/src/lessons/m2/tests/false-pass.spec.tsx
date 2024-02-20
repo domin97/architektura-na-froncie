@@ -33,7 +33,7 @@ type Shipment = {
 }
 const mockShipment: Shipment = {
   shipmentId: "346-4567-35467-4567",
-  expiryDate: new Date("2020-06-01")
+  expiryDate: new Date("2021-06-01")
 }
 
 const ShipButton: React.FC<{ shipment: Shipment }> = (props) => {

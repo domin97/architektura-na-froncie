@@ -13,7 +13,7 @@ export const Editor: React.FC<EditorProps> = (props) => {
 
   useEffect(() => {
     const element = textareaRef.current!
-    const simplemde = new SimpleMDE({ element });
+    const simplemde = new SimpleMDE({ element, toolbar: false });
     const handleChange = () => onChange(simplemde.value());
     // simplemde.codemirror // internal types: any 😞
     // eslint-disable-next-line @typescript-eslint/no-unsafe-call
