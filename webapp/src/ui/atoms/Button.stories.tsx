@@ -44,3 +44,7 @@ Outlined.args = {
   variant: "OUTLINED",
   children: "Outlined action",
 };
+
+export const Elo = () => {
+  return <Button variant="PRIMARY">elo</Button>
+}

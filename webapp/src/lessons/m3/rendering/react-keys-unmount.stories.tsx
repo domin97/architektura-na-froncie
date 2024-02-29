@@ -45,7 +45,7 @@ export const ReactKeysUnmount = () => {
     </>}</Description>
     {/* {currentTask.id} */}
     <TextTaskView
-      // key={currentTask.id}
+      key={currentTask.id}
       task={currentTask}
       onAnswerChange={action('answer changed')}
     />

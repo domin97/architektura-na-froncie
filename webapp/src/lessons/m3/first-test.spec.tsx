@@ -63,7 +63,7 @@ test.skip('ExamView', () => {
     // pojechali!
 
     getByText("Czy chrapiesz w nocy?")
-    // debug()
+    debug()
 
     const nextBtn = await findByRole("button", { name: "Next task" })
     fireEvent.click(nextBtn)
@@ -83,3 +83,37 @@ test.skip('ExamView', () => {
     expect(container).toHaveTextContent("Exam completed!")
   });
 });
+
+// describe('ExamView', () => {
+//   it('should display exam content', async () => {
+//     const {findByText, findByRole, getByText, debug, getByLabelText, container} = render(<ExamProcess />)
+
+//     await findByText("Please click start to begin your exam.")
+//     const startBtn = await findByRole("button", {name: "Start exam"})
+//     // when
+//     fireEvent.click(startBtn)
+//     // pojechali
+//     getByText("Czy chrapiesz w nocy?")
+
+//     // debug()
+
+//     const nextBtn = await findByRole("button", {name: "Next task"})
+//     fireEvent.click(nextBtn)
+
+//     // nastepne pytanie
+
+//     const hangoverInput = getByLabelText("Kiedy ostatni raz miałeś kaca?")
+    
+//     fireEvent.change(hangoverInput, {target: {value: "ło panie!"}})
+    
+//     // debug()
+    
+//     getByLabelText("Gdybyś miał być psem, to jakim?")
+
+//     const finishBtn = await findByRole("button", {name: "Finish exam"})
+//     fireEvent.click(finishBtn)
+
+//     expect(container).toHaveTextContent("Exam completed!")
+
+//   });
+// });
