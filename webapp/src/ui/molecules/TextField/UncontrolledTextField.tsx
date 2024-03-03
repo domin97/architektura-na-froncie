@@ -7,7 +7,7 @@ import { TextFieldProps } from './TextField';
 export const UncontrolledTextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref) => {
   const { id, label, layoutDirection = "horizontal", placeholder, defaultValue, disabled, error, noMargin } = props
   // 🔥 a jeśli nie ma forwardRef (nie propagujemy refa do góry), to useRef (tworzymy refa lokalnie):
-  // const ref = useRef<HTMLInputElement>(null)
+  const ref_ = useRef<HTMLInputElement>(null)
 
   return (
     <FormField
@@ -20,7 +20,7 @@ export const UncontrolledTextField = React.forwardRef<HTMLInputElement, TextFiel
       <Input
         type="input"
         id={id}
-        ref={ref}
+        ref={ref_}
         data-testid={id}
         defaultValue={defaultValue}
         placeholder={placeholder}
@@ -30,3 +30,5 @@ export const UncontrolledTextField = React.forwardRef<HTMLInputElement, TextFiel
     </FormField>
   );
 })
+
+// const el =  <UncontrolledTextField ref={} />
