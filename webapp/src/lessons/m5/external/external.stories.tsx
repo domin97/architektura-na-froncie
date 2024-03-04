@@ -37,39 +37,39 @@ class StatefulObject {
     renderAction('update', this.state.type)
   }
 
-  // subscriberFn?: SubscribeFn
-  // subscribe(fn: SubscribeFn){
-  //   this.subscriberFn = fn
-  // }
+  subscriberFn?: SubscribeFn
+  subscribe(fn: SubscribeFn){
+    this.subscriberFn = fn
+  }
   notify(){
     // this.subscriberFn?.()
   }
 
   async execute(){
-    this.state.type = "STARTED" // 👀 mutable
-    // this.state = { // 👀 immutable
-    //   ...this.state,
-    //   type: "STARTED"
-    // }
+    // this.state.type = "STARTED" // 👀 mutable
+    this.state = { // 👀 immutable
+      ...this.state,
+      type: "STARTED"
+    }
     this.notify()
     this.log()
 
     await delay(1000)
 
-    this.state.type = "IN PROGRESS" // 👀 mutable
-    // this.state = { // 👀 immutable
-    //   ...this.state,
-    //   type: "IN PROGRESS"
-    // }
+    // this.state.type = "IN PROGRESS" // 👀 mutable
+    this.state = { // 👀 immutable
+      ...this.state,
+      type: "IN PROGRESS"
+    }
     this.notify()
     this.log()
     await delay(1000)
 
-    this.state.type = "COMPLETE" // 👀 mutable
-    // this.state = { // 👀 immutable
-    //   ...this.state,
-    //   type: "COMPLETE"
-    // }
+    // this.state.type = "COMPLETE" // 👀 mutable
+    this.state = { // 👀 immutable
+      ...this.state,
+      type: "COMPLETE"
+    }
     this.notify()
     this.log()
   }
@@ -101,10 +101,10 @@ const externalState = new StatefulObject()
 export const Example = () => {
   const stateful = useRef(externalState)
 
-  // const forceRender = useForceRender()
-  // useEffect(() => {
-  //   stateful.current.subscribe(forceRender)
-  // }, [stateful, forceRender])
+  const forceRender = useForceRender()
+  useEffect(() => {
+    stateful.current.subscribe(forceRender)
+  }, [stateful, forceRender])
 
   return <>
     <StatefulInfo state={stateful.current.state} />
