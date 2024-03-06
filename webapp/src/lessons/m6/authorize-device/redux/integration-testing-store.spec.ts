@@ -16,6 +16,7 @@ import {
 // żeby nasze testy integracyjne działały zgodnie z zamierzeniem, IO musi być zamockowane
 
 // import { getTokenInstruction, sendTokenCode } from "../../../../api/token";
+``
 jest.mock("../../../../api/token", () => ({
   getTokenInstruction: async (): Promise<TokenInstruction> => {
     return { tokenId: "123", instruction: "Wpisz hasło" };
