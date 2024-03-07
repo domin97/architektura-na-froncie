@@ -35,5 +35,7 @@ describe('AuthorizeDevice', () => {
 
     authorizeDevicePO.expectSuccessCallback.toHaveBeenCalledTimes(1)
     authorizeDevicePO.expectLogoutCallback.not.toHaveBeenCalled()
+
+    // const btnChooseAddDevice = getByTestId("btn-choose-add-device")
   });
 })

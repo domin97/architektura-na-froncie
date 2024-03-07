@@ -25,6 +25,7 @@ describe('App Component', () => {
     const btn = await findByRole("link", { name:  "Historia konta" })
     act(() => btn.click())
 
+    await findByText("Historia konta")
     await findByText("Unbranded Cotton Mouse")
   });
 });
