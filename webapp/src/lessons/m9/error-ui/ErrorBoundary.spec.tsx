@@ -10,6 +10,7 @@ import { mockConsoleError, mockErrorBoundaryStackTrace } from './mock-utils';
 
 describe('ErrorBoundary', () => {
   it("should display error message if ErrorBoundary caught an exception", () => {
+    
     const mockLogger = new MockLogger();
     const cleanup = [mockConsoleError(), mockErrorBoundaryStackTrace()]
 

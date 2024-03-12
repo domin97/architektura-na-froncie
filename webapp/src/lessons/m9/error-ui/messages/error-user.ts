@@ -8,7 +8,6 @@ const getErrorMessageIfAxiosError = (e: AxiosError) => {
     return getErrorMessageByHTTPStatusCode(e.response.status);
   }
 };
-
 // kaskada IFów. Tę funkcję możemy wpiąć w try..catche w aplikacji
 export const getUserErrorMessage = (e: unknown): UserErrorMessage => {
   // najpierw sprawdzamy czy rzucony został nie-error

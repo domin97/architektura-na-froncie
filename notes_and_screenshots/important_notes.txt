@@ -1,0 +1,13 @@
+- eager or lazy loading 
+- storybook
+- xState
+- msw testing
+- Rx js
+
+
+
+
+- regularnie podnosić wersje TS 
+- częsta nieoczywista przyczyna różnych błędów to google translate
+- używać mock API np json-server & express do symulacji api i błędów
+- proxy server lepsza opcja od mock api bo nie rozsynchronizowuje api (np webpack & node-http-proxy)
