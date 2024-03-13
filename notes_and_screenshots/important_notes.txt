@@ -3,11 +3,23 @@
 - xState
 - msw testing
 - Rx js
-
-
+- cypress do testów end to end 
+- network request blocking in chrome inspector
+- Mermaid.js do automatycznego generowania diagramów w celu dokumentacyjnych
+- Web components
 
 
 - regularnie podnosić wersje TS 
 - częsta nieoczywista przyczyna różnych błędów to google translate
 - używać mock API np json-server & express do symulacji api i błędów
 - proxy server lepsza opcja od mock api bo nie rozsynchronizowuje api (np webpack & node-http-proxy)
+
+
+- jakich testów bysmy nie napisali to czynnik ludzki jest największym ryzykiem dla systemu 
+
+
+
+Bardzo ciekawe lekcje:
+Lekcja 10.04. Testowanie Accessibility [29:7]
+Lekcja 11.04. Implementacje mikrofrontendów: kompozycja legacy + greenfield [12:12]
+Lekcja 11.09. Organizacja kodu w projekcie [16:03]

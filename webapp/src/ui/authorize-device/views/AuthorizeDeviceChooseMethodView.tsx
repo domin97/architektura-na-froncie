@@ -10,7 +10,7 @@ interface AuthorizeDeviceChooseMethodViewProps {
 export const AuthorizeDeviceChooseMethodView = (props: AuthorizeDeviceChooseMethodViewProps) => {
   const { onAllowDeviceOnce, onAddDeviceToTrusted, onLogout } = props
   return <>
-    <Typography variant="h2">Nieznane urządzenie</Typography>
+    <Typography variant="h4">Nieznane urządzenie</Typography>
     <Typography variant="body">Mistrzu, jest sprawa... nie mamy pewności, że Ty to Ty. Musimy zautoryzować urządzenie, z którego do nas klikasz.</Typography>
     <Typography variant="body">No i albo zapisujemy Twoje urządzenie jako zaufane (i nie zobaczysz więcej tego komunikatu) - albo każdorazowo będziesz autoryzować urządzenie, z którego próbujesz sie zalogować do apki.</Typography>
     <Typography variant="body">Dobrze się zastanów. Nam to rybka.</Typography>
